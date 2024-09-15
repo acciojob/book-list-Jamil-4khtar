@@ -24,12 +24,13 @@ row.append(th3);
 th3.innerHTML = "ISBN#"
 
 
-
+let tbody = document.createElement('tbody');
+tbody.id = "book-list";
+table.append(tbody);
 
 document.getElementById("submit").addEventListener("click", (e) => {
     e.preventDefault();
-    let tbody = table.createTBody();
-    tbody.id = "book-list"
+    
     let body_row = tbody.insertRow();
     let title_cell = body_row.insertCell()
     title_cell.innerHTML = title.value;
